@@ -4,46 +4,62 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vinhos do Campo</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <header>
-    <h1>Vinhos do campo</h1>
+    <h1>Vinhos do Campo</h1>
     <nav>
       <a href="#sobre">Sobre</a>
       <a href="#contato">Contato</a>
     </nav>
   </header>
 
-  <img src="campo.jpg" alt="Campo ao pôr do sol" class="header-img"/>
+  <img src="campo.jpg" alt="Campo ao pôr do sol" class="header-img" />
 
   <main>
     <h2>Vinhos</h2>
     <section class="produtos">
-      <div class="produto">
-        <img src="vinho_tinto.png" alt="Vinho tinto" />
-        <p>Vinho tinto<br><strong>R$90,00</strong></p>
+      <div class="produto" data-nome="Vinho Tinto" data-preco="R$90,00" data-descricao="Um vinho tinto encorpado com aroma frutado.">
+        <img src="vinho_tinto.png" alt="Vinho Tinto" />
+        <p>Vinho Tinto<br><strong>R$90,00</strong></p>
       </div>
-      <div class="produto">
-        <img src="vinho_branco.png" alt="Vinho branco" />
-        <p>Vinho branco<br><strong>R$99,90</strong></p>
+
+      <div class="produto" data-nome="Vinho Branco" data-preco="R$99,90" data-descricao="Leve e refrescante, ideal para dias quentes.">
+        <img src="vinho_branco.png" alt="Vinho Branco" />
+        <p>Vinho Branco<br><strong>R$99,90</strong></p>
       </div>
-      <div class="produto">
-        <img src="vinho_rose.png" alt="Vinho rosé" />
-        <p>Vinho rosé<br><strong>R$90,00</strong></p>
+
+      <div class="produto" data-nome="Vinho Rosé" data-preco="R$90,00" data-descricao="Equilíbrio entre o doce e o seco.">
+        <img src="vinho_rose.png" alt="Vinho Rosé" />
+        <p>Vinho Rosé<br><strong>R$90,00</strong></p>
       </div>
-      <div class="produto">
-        <img src="vinho_espumante.png" alt="Vinho espumante" />
-        <p>Vinho espumante<br><strong>R$65,00</strong></p>
+
+      <div class="produto" data-nome="Vinho Espumante" data-preco="R$65,00" data-descricao="Perfeito para celebrações.">
+        <img src="vinho_espumante.png" alt="Vinho Espumante" />
+        <p>Vinho Espumante<br><strong>R$65,00</strong></p>
       </div>
-      <div class="produto">
-        <img src="vinho_licoroso.png" alt="Vinho licoroso" />
-        <p>Vinho licoroso<br><strong>R$89,00</strong></p>
+
+      <div class="produto" data-nome="Vinho Licoroso" data-preco="R$89,00" data-descricao="Doce, ideal para sobremesas.">
+        <img src="vinho_licoroso.png" alt="Vinho Licoroso" />
+        <p>Vinho Licoroso<br><strong>R$89,00</strong></p>
       </div>
-      <div class="produto">
-        <img src="vinho_verde.png" alt="Vinho verde" />
-        <p>Vinho verde<br><strong>R$85,00</strong></p>
+
+      <div class="produto" data-nome="Vinho Verde" data-preco="R$85,00" data-descricao="Fresco e leve, típico de Portugal.">
+        <img src="vinho_verde.png" alt="Vinho Verde" />
+        <p>Vinho Verde<br><strong>R$85,00</strong></p>
+      </div>
+
+      <!-- Novos produtos -->
+      <div class="produto" data-nome="Vinho do Porto" data-preco="R$120,00" data-descricao="Envelhecido e intenso, com sabor marcante.">
+        <img src="vinho_do_porto.png" alt="Vinho do Porto" />
+        <p>Vinho do Porto<br><strong>R$120,00</strong></p>
+      </div>
+
+      <div class="produto" data-nome="Vinho Orgânico" data-preco="R$95,00" data-descricao="Feito com uvas orgânicas, sem agrotóxicos.">
+        <img src="vinho_organico.png" alt="Vinho Orgânico" />
+        <p>Vinho Orgânico<br><strong>R$95,00</strong></p>
       </div>
     </section>
   </main>
@@ -51,6 +67,16 @@
   <footer>
     <p>Desenvolvido por Lara Szatkowski<br>Orientadora: Regiane Plem</p>
   </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3 id="modal-nome"></h3>
+      <p id="modal-descricao"></p>
+      <strong id="modal-preco"></strong>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
