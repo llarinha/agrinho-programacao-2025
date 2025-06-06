@@ -1,7 +1,6 @@
-// Exemplo simples de interatividade ao clicar em um produto
-
+// Exemplo de interatividade simples ao clicar em um produto
 document.querySelectorAll('.produto').forEach(item => {
   item.addEventListener('click', () => {
-    alert('Produto selecionado!');
+    alert('Você clicou em um produto!');
   });
 });

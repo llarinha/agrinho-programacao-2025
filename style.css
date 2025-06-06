@@ -1,58 +1,98 @@
+/* Estilo moderno e elegante para \"Vinhos do campo\" */
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #b99342;
-  color: #000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f1ea;
+  color: #2c2c2c;
   text-align: center;
 }
 
 header {
-  padding: 20px;
+  background-color: #7b3f00;
+  color: white;
+  padding: 40px 20px 20px;
+  border-bottom: 5px solid #5e2e00;
+}
+
+header h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+nav {
+  margin-bottom: 20px;
 }
 
 nav a {
-  margin: 0 20px;
-  font-size: 20px;
+  margin: 0 15px;
+  font-size: 18px;
   text-decoration: none;
-  color: black;
+  color: #ffe9c6;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
 }
 
 .header-img {
-  width: 80%;
-  max-width: 800px;
-  height: auto;
-  margin: 20px 0;
-  border-radius: 10px;
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-bottom: 4px solid #5e2e00;
 }
 
-h1, h2 {
+main h2 {
   font-size: 36px;
+  margin: 30px 0 10px;
+  color: #5e2e00;
 }
 
 .produtos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .produto {
-  background-color: #fffccf;
-  border-radius: 20px;
-  padding: 10px;
-  width: 150px;
-  text-align: center;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .produto img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.produto p {
+  font-size: 18px;
+  margin: 0;
+  color: #3e3e3e;
+}
+
+.produto strong {
+  color: #7b3f00;
+  font-size: 20px;
 }
 
 footer {
   background-color: #3c1f0e;
-  color: white;
-  padding: 10px;
+  color: #fff;
+  padding: 20px;
   font-size: 14px;
+  margin-top: 40px;
+  border-top: 5px solid #5e2e00;
 }
