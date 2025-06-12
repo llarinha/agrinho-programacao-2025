@@ -1,73 +1,81 @@
-body {
+/* Reset básico */
+* {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f1ea;
-  color: #2c2c2c;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f5f0;
+  color: #333;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #641e16;
+  color: white;
+  padding: 40px 20px;
   text-align: center;
 }
 
-header {
-  background-color: #7b3f00;
-  color: white;
-  padding: 40px 20px 20px;
-  border-bottom: 5px solid #5e2e00;
-}
-
 header h1 {
-  font-size: 48px;
+  font-size: 3rem;
   margin-bottom: 10px;
 }
 
-nav {
-  margin-bottom: 20px;
-}
-
 nav a {
+  color: #fddbb2;
   margin: 0 15px;
-  font-size: 18px;
   text-decoration: none;
-  color: #ffe9c6;
-  transition: color 0.3s ease;
+  font-weight: bold;
 }
 
 nav a:hover {
-  color: #ffffff;
+  color: white;
 }
 
+/* Imagem principal */
 .header-img {
   width: 100%;
-  max-height: 400px;
+  height: 300px;
   object-fit: cover;
-  border-bottom: 4px solid #5e2e00;
+  border-bottom: 4px solid #5a1c1c;
+}
+
+/* Produtos */
+main {
+  padding: 40px 20px;
+  text-align: center;
 }
 
 main h2 {
-  font-size: 36px;
-  margin: 30px 0 10px;
-  color: #5e2e00;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #641e16;
 }
 
 .produtos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 30px;
-  padding: 40px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .produto {
-  background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: white;
   padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
   cursor: pointer;
 }
 
 .produto:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 .produto img {
@@ -77,55 +85,51 @@ main h2 {
 }
 
 .produto p {
-  font-size: 18px;
-  margin: 0;
-  color: #3e3e3e;
+  font-size: 1rem;
+  color: #444;
 }
 
 .produto strong {
-  color: #7b3f00;
-  font-size: 20px;
+  color: #841c26;
+  font-size: 1.1rem;
 }
 
+/* Rodapé */
 footer {
-  background-color: #3c1f0e;
-  color: #fff;
+  background-color: #3c1c1c;
+  color: white;
   padding: 20px;
-  font-size: 14px;
-  margin-top: 40px;
-  border-top: 5px solid #5e2e00;
+  text-align: center;
 }
 
 /* Modal */
 .modal {
   display: none;
   position: fixed;
-  z-index: 100;
+  z-index: 99;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.5);
 }
 
 .modal-content {
-  background-color: #fff;
+  background-color: white;
   margin: 10% auto;
   padding: 30px;
-  border: 1px solid #888;
+  border-radius: 12px;
   width: 90%;
   max-width: 400px;
-  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
   text-align: left;
 }
 
 .close {
-  color: #aaa;
   float: right;
   font-size: 24px;
-  font-weight: bold;
   cursor: pointer;
+  color: #888;
 }
 
 .close:hover {
